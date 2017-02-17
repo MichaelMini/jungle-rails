@@ -135,10 +135,15 @@ cat3.products.create!({
 Review.destroy_all
 
 Review.create!({product_id:1, user_id:1, description:"tubulostriato unterrifiable raptril caudillism naturopathy gastrolith katsup misbaptize smurr maximistic scrippage prosaical oligodynamic myrabalanus kynurenic elevated clubfisted autotoxication outjut expurge majagua absolutist unghostly tenableness", rating:1 })
+
 Review.create!({product_id:2, user_id:2, description:"convertend inobservancy chromoplastid pastryman ansate antiabrin daroo underproportion measurelessly licentiation herpetotomist hymnodist intil pinkly acronical Casuarina psoriasic foeman stenciler pumper andromania spoutman nonevaporation ers", rating:2 })
+
 Review.create!({product_id:3, user_id:3, description:"unctorium immix bisulphide Actinocrinus unjaded faze Mystacocete Wendish degrain uroxin ergodic superregenerative unbarricaded anthroic Aphanapteryx thack damped unrighteousness nonleprous granulous synkinetic hyperrational tensional platinization", rating:3 })
+
 Review.create!({product_id:4, user_id:4, description:"isagon fissate inheritable atypically cairngorm bounteous uncloudy opsonization perididymitis spheterize rivetless guarana anaconda overbusy raking unslip Chilognatha shelfy antilacrosser parturiency monoureide flowerer geo coaltitude", rating:4 })
+
 Review.create!({product_id:5, user_id:5, description:"cohesibility colorability narica underdone Micraster Allotriognathi ooporphyrin costated archesporial bugfish krome hematemesis sociodrama quadricrescentic coinstantaneity rhinolophid ethnogeography limonium releasee demodulator Neotremata blotto minx wiredraw", rating:5 })
+
 Review.create!({product_id:6, user_id:6, description:"newsletter myxoid manlessly nonexaggeration spectroheliograph frustrater coleopterological Pompilus Statehouse Eurytomidae perkily uncorrupting recurvate columelliform phototypic unpressed granulomatous widespreadness subvisible naringin vis resward counterermine Carrara", rating:6 })
 
 puts "DONE!"
