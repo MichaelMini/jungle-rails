@@ -87,6 +87,22 @@ main section.products-show {
   .rating {
     color: gray;
   }
+
+  .review {
+    text-overflow: ellipsis;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-transition: all 1s; /* Safari */
+    transition: all 1s;
+  }
+
+  .hover:hover .review {
+    text-overflow: visible;
+    width: 480px;
+    white-space: normal;
+    overflow: initial;
+  }
 }
 
 

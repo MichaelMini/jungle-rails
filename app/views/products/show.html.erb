@@ -49,22 +49,24 @@
         <dl class="dl-horizontal">
           <h4>User Ratings</h4>
           <% @product.reviews.reverse.each do |review| %>
-            <br>
-            <dt>User Name</dt>
-            <dd><%= review.user.first_name %></dd>
-            <dt>Description</dt>
-            <dd><%= review.description %></dd>
-            <dt>Rating</dt>
-            <dd><%= review.rating %>/10</dd>
-            <%if current_user%>
-              <dd>
-                <%= link_to 'Remove This Review', [review.product, review],
-                             method: :delete,
-                             data: { confirm: 'Are you sure?' } %>
-              </dd>
-            <%end%>
-            <br>
-            <br>
+            <dl class="hover">
+              <br>
+              <dt>User Name</dt>
+              <dd><%= review.user.first_name %></dd>
+              <dt>Description</dt>
+              <dd class="review"><%= review.description %></dd>
+              <dt>Rating</dt>
+              <dd><%= review.rating %>/10</dd>
+              <%if current_user.id == review.user_id%>
+                <dd>
+                  <%= link_to 'Remove This Review', [review.product, review],
+                               method: :delete,
+                               data: { confirm: 'Are you sure?' } %>
+                </dd>
+              <%end%>
+              <br>
+              <br>
+            </dl>
           <% end %>
         </dl>
       </div>
