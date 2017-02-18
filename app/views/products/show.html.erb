@@ -25,18 +25,18 @@
         </dl>
       </div>
 
-      <div class="col-sm-8">
+      <div class="col-sm-8 rating">
         <dl class="dl-horizontal">
-        <h4>Users' Rating</h4>
-        <% @product.reviews.each do | review| %>
-          <dt>user_id</dt>
-          <dd><%= review.user.first_name %></dd>
-          <dt>Description</dt>
-          <dd><%= review.description %></dd>
-          <dt>Rating</dt>
-          <dd><%= review.rating %></dd>
-          <br>
-        <% end %>
+          <h4>User Ratings</h4>
+          <% @product.reviews.each do | review| %>
+            <dt>User Name</dt>
+            <dd><%= review.user.first_name %></dd>
+            <dt>Description</dt>
+            <dd><%= review.description %></dd>
+            <dt>Rating</dt>
+            <dd><%= review.rating %>/10</dd>
+            <br>
+          <% end %>
         </dl>
       </div>
 
