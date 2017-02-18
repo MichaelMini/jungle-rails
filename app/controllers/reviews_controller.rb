@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_filter :authorize
   def create
     @product = Product.find(params[:product_id])
     # @review = @product.reviews.create(review_params)
@@ -10,7 +11,14 @@ class ReviewsController < ApplicationController
     else
       redirect :back
     end # ???
+  end
 
+  def destroy
+    @product = Product.find(params[:product_id])
+    @review = @product.reviews.find(params[:id])
+    @review.destroy
+
+    redirect_to @review.product
   end
 
   private
