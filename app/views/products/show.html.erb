@@ -25,10 +25,27 @@
         </dl>
       </div>
 
+      <div class="col-sm-6 col-sm-offset-1">
+        <h2>Add a comment:</h2>
+        <%= form_for([@product, @review]) do |f| %>
+          <p>
+            <%= f.label :description %><br>
+            <%= f.text_field :description %>
+          </p>
+          <p>
+            <%= f.label :rating %><br>
+            <%= f.select :rating, options_for_select(1..10), { prompt: "Select One" } %>
+          </p>
+          <p>
+            <%= f.submit %>
+          </p>
+        <% end %>
+      </div>
+
       <div class="col-sm-8 rating">
         <dl class="dl-horizontal">
           <h4>User Ratings</h4>
-          <% @product.reviews.each do | review| %>
+          <% @product.reviews.each do |review| %>
             <dt>User Name</dt>
             <dd><%= review.user.first_name %></dd>
             <dt>Description</dt>
