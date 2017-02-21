@@ -65,6 +65,17 @@ RSpec.describe User, type: :model do
     end
   end
   describe '.authenticate_with_credentials' do
+    before(:each) do
+      @user12 = User.create( first_name: 'Michael', last_name: 'Cho', email: 'michael@gmail.com', password: '80008000', password_confirmation: '80008000')
+    end
+    it "Login with white-space" do
+      user = User.authenticate_with_credentials(" michael@gmail.com ", "80008000")
+      expect(user).to be_instance_of(User)
+    end
+    it "Login with mix-case" do
+      user = User.authenticate_with_credentials("MicHael@Gmail.Com", "80008000")
+      expect(user).to be_instance_of(User)
+    end
     # examples for this class method here
     # before(:each) do
     #   @user12 = User.create( first_name: 'Michael', last_name: 'Cho', email: 'michael@gmail.com', password: '80008000', password_confirmation: '80008000')
